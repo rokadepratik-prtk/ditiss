@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Persistent Checklist</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      color: #333;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #1f4e79;
+      border-bottom: 2px solid #cbd2d9;
+      padding-bottom: 5px;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      padding: 6px 10px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    label:hover {
+      background-color: #e3f2fd;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      accent-color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+    
+ 
+  <h1>✅ Aptitude & Effective Communication – PG-DITISS August 2025</h1>
+
+  <h2>Session 1: Number System</h2>
+  <label><input type="checkbox" id="unitDigit"> Unit Digit</label>
+  <label><input type="checkbox" id="last2Digits"> Last 2 Digits</label>
+  <label><input type="checkbox" id="remainder"> Remainder</label>
+  <label><input type="checkbox" id="divisibility"> Divisibility</label>
+  <label><input type="checkbox" id="cyclicity"> Cyclicity</label>
+  <label><input type="checkbox" id="fastMaths"> Fast Maths</label>
+  <label><input type="checkbox" id="simplification"> Simplification</label>
+  <label><input type="checkbox" id="lcmHcf"> LCM & HCF</label>
+
+  <h2>Session 2: Ratio and Proportion</h2>
+  <label><input type="checkbox" id="ratio"> Ratio and Proportion</label>
+  <label><input type="checkbox" id="partnership"> Partnership</label>
+
+  <h2>Session 3: Percentage & Profit</h2>
+  <label><input type="checkbox" id="percentage"> Percentage</label>
+  <label><input type="checkbox" id="profitLoss"> Profit and Loss</label>
+
+  <h2>Session 4: Interest</h2>
+  <label><input type="checkbox" id="simpleCompoundInterest"> Simple & Compound Interest</label>
+
+  <h2>Session 5: Motion Problems</h2>
+  <label><input type="checkbox" id="timeSpeedDistance"> Time, Speed and Distance</label>
+  <label><input type="checkbox" id="trains"> Trains</label>
+
+  <h2>Session 6: Work & Wages</h2>
+  <label><input type="checkbox" id="timeWork"> Time and Work</label>
+  <label><input type="checkbox" id="wages"> Wages</label>
+
+  <h2>Session 7: Flow Problems</h2>
+  <label><input type="checkbox" id="pipesCisterns"> Pipes and Cisterns</label>
+  <label><input type="checkbox" id="boatsStreams"> Boats and Streams</label>
+
+  <h2>Session 8: Averages & Mixtures</h2>
+  <label><input type="checkbox" id="averages"> Averages</label>
+  <label><input type="checkbox" id="mixturesAlligations"> Mixtures and Alligations</label>
+
+  <h2>Session 9: Probability</h2>
+  <label><input type="checkbox" id="probability"> Probability</label>
+
+  <h2>Session 10: Permutations & Combinations</h2>
+  <label><input type="checkbox" id="permutationsCombinations"> Permutations and Combinations</label>
+
+  <h2>Session 11: Series</h2>
+  <label><input type="checkbox" id="numberSeries"> Number Series</label>
+  <label><input type="checkbox" id="alphabeticalSeries"> Alphabetical Series</label>
+  <label><input type="checkbox" id="repetitiveSeries"> Repetitive Series</label>
+
+  <h2>Session 12: Blood Relations</h2>
+  <label><input type="checkbox" id="bloodRelations"> Blood Relations</label>
+
+  <h2>Session 13: Coding-Decoding</h2>
+  <label><input type="checkbox" id="codingDecoding"> Coding-Decoding</label>
+
+  <h2>Session 14: Seating Arrangement</h2>
+  <label><input type="checkbox" id="seatingArrangement"> Seating Arrangement</label>
+
+  <h2>Session 15: Syllogism & Venn Diagram</h2>
+  <label><input type="checkbox" id="syllogism"> Syllogism</label>
+  <label><input type="checkbox" id="vennDiagram"> Venn Diagram</label>
+
+  <h2>Session 16: Data Analysis</h2>
+  <label><input type="checkbox" id="dataInterpretation"> Data Interpretation</label>
+  <label><input type="checkbox" id="dataSufficiency"> Data Sufficiency</label>
+
+  <h2>Session 17: Age & Calendar Problems</h2>
+  <label><input type="checkbox" id="problemsAges"> Problems on Ages</label>
+  <label><input type="checkbox" id="clockCalendar"> Clock & Calendar</label>
+
+  <h2>Session 18: Alphabetical Reasoning & Ranking</h2>
+  <label><input type="checkbox" id="alphabeticalReasoning"> Alphabetical Reasoning</label>
+  <label><input type="checkbox" id="rankingOrder"> Ranking & Order</label>
+
+  <h2>Session 19: Direction & Puzzles</h2>
+  <label><input type="checkbox" id="directionSense"> Direction Sense</label>
+  <label><input type="checkbox" id="puzzles"> Puzzles</label>
+
+  <h2>Session 20: Verbal Reasoning</h2>
+  <label><input type="checkbox" id="statementsArguments"> Statements & Arguments</label>
+  <label><input type="checkbox" id="statementsConclusions"> Statements & Conclusions</label>
+  <label><input type="checkbox" id="statementsAssumptions"> Statements & Assumptions</label>
+
+  <script>
+    // Load saved checkbox states
+    window.onload = function () {
+      document.querySelectorAll("input[type=checkbox]").forEach(cb => {
+        cb.checked = localStorage.getItem(cb.id) === "true";
+        cb.addEventListener("change", () => {
+          localStorage.setItem(cb.id, cb.checked);
+        });
+      });
+    };
+  </script>
+</body>
+</html>
