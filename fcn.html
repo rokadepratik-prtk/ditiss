@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CCEE Syllabus Checklist</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
@@ -30,7 +30,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .section {
       background: #fff;
       padding: 15px;
       margin-bottom: 20px;
@@ -81,67 +81,77 @@
   </style>
 </head>
 <body>
- <nav>
-      <ul>
-          <li><a href="index.html">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
 
+  <nav>
+    <ul>
+      <li><a href="index.html">Aptitude</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">Programming</a></li>
+      <li><a href="compliance.html">Compliance</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+    </ul>
+  </nav>
 
   <h1>📝 CCEE Exam Syllabus Checklist</h1>
+  <p id="progress">Progress: 0 of 0 topics completed</p>
 
-  <div class="section" id="core">
+  <div class="section" id="sessions">
     <h2>Core Concepts of Networking</h2>
-    <label><input type="checkbox" /> Internetworking and network types</label>
-    <label><input type="checkbox" /> OSI and TCP/IP models</label>
-    <label><input type="checkbox" /> Ethernet and wireless networking</label>
-    <label><input type="checkbox" /> Internet Protocol (IP)</label>
-    <label><input type="checkbox" /> TCP vs UDP</label>
-  </div>
+    <label><input type="checkbox" data-key="core-0" /> Internetworking and network types</label>
+    <label><input type="checkbox" data-key="core-1" /> OSI and TCP/IP models</label>
+    <label><input type="checkbox" data-key="core-2" /> Ethernet and wireless networking</label>
+    <label><input type="checkbox" data-key="core-3" /> Internet Protocol (IP)</label>
+    <label><input type="checkbox" data-key="core-4" /> TCP vs UDP</label>
 
-  <div class="section" id="subnetting">
     <h2>IP Addressing & Subnetting</h2>
-    <label><input type="checkbox" /> Subnetting techniques</label>
-    <label><input type="checkbox" /> VLSM</label>
-    <label><input type="checkbox" /> Network and host portions</label>
-    <label><input type="checkbox" /> Subnet design</label>
-    <label><input type="checkbox" /> CIDR notation</label>
-  </div>
+    <label><input type="checkbox" data-key="subnet-0" /> Subnetting techniques</label>
+    <label><input type="checkbox" data-key="subnet-1" /> VLSM</label>
+    <label><input type="checkbox" data-key="subnet-2" /> Network and host portions</label>
+    <label><input type="checkbox" data-key="subnet-3" /> Subnet design</label>
+    <label><input type="checkbox" data-key="subnet-4" /> CIDR notation</label>
 
-  <div class="section" id="routing">
     <h2>Routing Protocols</h2>
-    <label><input type="checkbox" /> Static and dynamic routing</label>
-    <label><input type="checkbox" /> RIP, IGRP, EIGRP, OSPF</label>
-    <label><input type="checkbox" /> Route advertisement</label>
+    <label><input type="checkbox" data-key="routing-0" /> Static and dynamic routing</label>
+    <label><input type="checkbox" data-key="routing-1" /> RIP, IGRP, EIGRP, OSPF</label>
+    <label><input type="checkbox" data-key="routing-2" /> Route advertisement</label>
+
+    <h2>SDN & OpenFlow</h2>
+    <label><input type="checkbox" data-key="sdn-0" /> SDN architecture</label>
+    <label><input type="checkbox" data-key="sdn-1" /> OpenFlow and OpenDaylight</label>
+    <label><input type="checkbox" data-key="sdn-2" /> Virtual networking and use cases</label>
   </div>
 
-  <div class="section" id="sdn">
-    <h2>SDN & OpenFlow</h2>
-    <label><input type="checkbox" /> SDN architecture</label>
-    <label><input type="checkbox" /> OpenFlow and OpenDaylight</label>
-    <label><input type="checkbox" /> Virtual networking and use cases</label>
-  </div>
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | CCEE Syllabus Module</p>
+  </footer>
 
   <script>
-    // Save checkbox state to localStorage
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((box, index) => {
-      const saved = localStorage.getItem('checkbox' + index);
-      if (saved === 'true') box.checked = true;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-key]');
+    const progress = document.getElementById('progress');
 
-      box.addEventListener('change', () => {
-        localStorage.setItem('checkbox' + index, box.checked);
+    function updateProgress() {
+      const total = checkboxes.length;
+      const checked = Array.from(checkboxes).filter(box => box.checked).length;
+      progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+    }
+
+    checkboxes.forEach(box => {
+      const key = box.dataset.key;
+      const saved = localStorage.getItem(key);
+      if (saved === "true") box.checked = true;
+
+      box.addEventListener("change", () => {
+        localStorage.setItem(key, box.checked);
+        updateProgress();
       });
     });
+
+    updateProgress();
   </script>
 
 </body>
