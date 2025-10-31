@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG-DITISS Public Key Infrastructure (PKI)</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .session {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #progress {
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s, background 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+ <nav>
+      <ul>
+         <li><a href="index.html">Aptitude</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="fcn.html">CN</a></li>
+        <li><a href="os.html">OS </a></li>
+        <li><a href="cyb_for.html">Cyber</a></li>
+        <li><a href="ndc.html">NDC</a></li>
+        <li><a href="pki.html">PKI</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+               <li><a href="itim.html">DevOps</a></li>
+      </ul>
+    </nav>
+<h1>🔐 Public Key Infrastructure (PG-DITISS)</h1>
+<p id="progress">Progress: 0 of 0 topics completed</p>
+
+<!-- =================== SECTION A =================== -->
+<div class="section">
+  <h2>Session 1: Introduction to Information Security</h2>
+  <label><input type="checkbox" /> Information Security Concepts</label>
+  <label><input type="checkbox" /> Security Attacks & Threats</label>
+</div>
+
+<div class="section">
+  <h2>Session 2: Basic Encryption</h2>
+  <label><input type="checkbox" /> Basic Encryption Concepts</label>
+  <label><input type="checkbox" /> File Encryption Techniques</label>
+  <label><input type="checkbox" /> Encrypting Folders (Graphical / cipher)</label>
+</div>
+
+<div class="section">
+  <h2>Session 3: Cryptography Fundamentals</h2>
+  <label><input type="checkbox" /> Cryptographic Fundamentals</label>
+  <label><input type="checkbox" /> Symmetric and Asymmetric Ciphers</label>
+  <label><input type="checkbox" /> Cryptographic Protocols (History, Usage, Keys)</label>
+</div>
+
+<div class="section">
+  <h2>Session 4: Encryption Algorithms</h2>
+  <label><input type="checkbox" /> Symmetric Key Encryption – DES, AES, RC5</label>
+  <label><input type="checkbox" /> Asymmetric Key Encryption – RSA, ECC</label>
+</div>
+
+<div class="section">
+  <h2>Session 5: Key Exchange & Lab Practice (2 Theory + 4 Lab Hrs)</h2>
+  <label><input type="checkbox" /> Diffie-Hellman Key Exchange</label>
+  <label><input type="checkbox" /> Attacks Against Encryption</label>
+  <label><input type="checkbox" /> Cryptographic Issues</label>
+  <label><input type="checkbox" /> Lab: Use Cryptool for Symmetric & Asymmetric Encryption</label>
+  <label><input type="checkbox" /> Lab: Try Caesar, Vernam, DES, AES, RC4, XOR, 3DES</label>
+  <label><input type="checkbox" /> Lab: Perform RSA & ECC Encryption/Decryption</label>
+</div>
+
+<div class="section">
+  <h2>Session 6: Secure Hashing Methods</h2>
+  <label><input type="checkbox" /> SHA Secure Hash Algorithm</label>
+  <label><input type="checkbox" /> HMAC (Hash-based Message Authentication Code)</label>
+</div>
+
+<div class="section">
+  <h2>Session 7: PKI Fundamentals</h2>
+  <label><input type="checkbox" /> Digital Signature</label>
+  <label><input type="checkbox" /> Digital Certificate</label>
+</div>
+
+<div class="section">
+  <h2>Session 8: Certificate Authorities & Trust Model</h2>
+  <label><input type="checkbox" /> Certificate Authority (CA)</label>
+  <label><input type="checkbox" /> Trust Model</label>
+  <label><input type="checkbox" /> Certificate Issuance Process</label>
+  <label><input type="checkbox" /> Certificate Revocation (CRL, OCSP)</label>
+  <label><input type="checkbox" /> Types and Classes of Certificates</label>
+</div>
+
+<div class="section">
+  <h2>Session 9: Aadhaar & e-Sign (2 Theory + 4 Lab Hrs)</h2>
+  <label><input type="checkbox" /> Aadhaar & e-Sign Introduction</label>
+  <label><input type="checkbox" /> Time Stamping Services</label>
+  <label><input type="checkbox" /> Lab: Create Digital Signature Using XCA</label>
+  <label><input type="checkbox" /> Lab: Digitally Sign Word & PDF Documents</label>
+</div>
+
+<div class="section">
+  <h2>Session 10: PKCS & FIPS (2 Theory + 4 Lab Hrs)</h2>
+  <label><input type="checkbox" /> PKCS Standards</label>
+  <label><input type="checkbox" /> FIPS 140-2 Overview</label>
+  <label><input type="checkbox" /> Lab: Create Digital Certificate Using XCA</label>
+  <label><input type="checkbox" /> Lab: Create CA and Issue Website Certificate (https://www.ditiss.local)</label>
+  <label><input type="checkbox" /> Lab: Import Certificate in Browser to Remove Warnings</label>
+</div>
+
+<div class="section">
+  <h2>Session 11: Authentication</h2>
+  <label><input type="checkbox" /> Strong Authentication</label>
+  <label><input type="checkbox" /> Single Factor and Multi-Factor Authentication</label>
+  <label><input type="checkbox" /> Single Sign-On (SSO) Solutions</label>
+  <label><input type="checkbox" /> OpenID & OAuth</label>
+  <label><input type="checkbox" /> Graphical Passwords</label>
+</div>
+
+<div class="section">
+  <h2>Session 12: Authentication Protocols</h2>
+  <label><input type="checkbox" /> Authentication Protocols Overview</label>
+  <label><input type="checkbox" /> FIDO Authentication</label>
+  <label><input type="checkbox" /> Zero Trust Architecture</label>
+</div>
+
+<div class="section">
+  <h2>Session 13: Securing Websites & Emails (2 Theory + 4 Lab Hrs)</h2>
+  <label><input type="checkbox" /> SSL & TLS Overview</label>
+  <label><input type="checkbox" /> PGP and S/MIME</label>
+  <label><input type="checkbox" /> Lab: Create Self-Signed Certificates with OpenSSL</label>
+  <label><input type="checkbox" /> Lab: Build Hierarchical Trust Model (Root & Sub CA)</label>
+  <label><input type="checkbox" /> Lab: Configure HTTPS Website (https://www.pgditiss.local)</label>
+</div>
+
+<div class="section">
+  <h2>Session 14 & 15: Legal and Advanced Topics (4 Theory + 4 Lab Hrs)</h2>
+  <label><input type="checkbox" /> IT Act Overview</label>
+  <label><input type="checkbox" /> LDAP and Active Directory</label>
+  <label><input type="checkbox" /> Introduction to Blockchain</label>
+  <label><input type="checkbox" /> Lab: Digitally Sign & Encrypt Email using Thunderbird / Outlook</label>
+</div>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const progress = document.getElementById('progress');
+
+  function updateProgress() {
+    const total = checkboxes.length;
+    const checked = Array.from(checkboxes).filter(b => b.checked).length;
+    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+  }
+
+  checkboxes.forEach((box, i) => {
+    const key = 'pki-' + i;
+    const saved = localStorage.getItem(key);
+    if (saved === 'true') box.checked = true;
+
+    box.addEventListener('change', () => {
+      localStorage.setItem(key, box.checked);
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>

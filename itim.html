@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG-DITISS ITIM Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .session {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #progress {
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s, background 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+      <ul>
+          <li><a href="index.html">Aptitude</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="fcn.html">CN</a></li>
+        <li><a href="os.html">OS </a></li>
+        <li><a href="cyb_for.html">Cyber</a></li>
+        <li><a href="ndc.html">NDC</a></li>
+        <li><a href="pki.html">PKI</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+               <li><a href="itim.html">DevOps</a></li>
+      </ul>
+    </nav>
+<h1>🏗️ PG-DITISS IT Infrastructure Management (ITIM) Checklist</h1>
+<p id="progress">Progress: 0 of 0 topics completed</p>
+
+<!-- SECTION: ITIL INTRODUCTION -->
+<div class="section" id="itil">
+  <h2>A. Introduction to ITIL</h2>
+  <label><input type="checkbox" /> Service Strategy Overview</label>
+  <label><input type="checkbox" /> Competition and Market Space</label>
+  <label><input type="checkbox" /> Service Provider Types</label>
+  <label><input type="checkbox" /> Service Management as a Strategic Asset</label>
+  <label><input type="checkbox" /> Financial Management</label>
+  <label><input type="checkbox" /> Service Portfolio & Demand Management</label>
+  <label><input type="checkbox" /> Service Design: Architecture, Processes, and Policies</label>
+  <label><input type="checkbox" /> Service Design Package (SDP)</label>
+  <label><input type="checkbox" /> Service Level and Capacity Management</label>
+  <label><input type="checkbox" /> IT Service Continuity & Security</label>
+  <label><input type="checkbox" /> Service Transition: Configuration & Change Management</label>
+  <label><input type="checkbox" /> Release, Deployment & Knowledge Management</label>
+  <label><input type="checkbox" /> Service Operation: Event, Incident, and Problem Management</label>
+  <label><input type="checkbox" /> Service Desk, Technical & Application Management</label>
+  <label><input type="checkbox" /> Continual Service Improvement (CSI): Roles & Activities</label>
+  <label><input type="checkbox" /> Training, Awareness & Ongoing Scheduling</label>
+</div>
+
+<!-- SECTION: DATA CENTER MANAGEMENT -->
+<div class="section" id="datacenter">
+  <h2>B. Data Center Management</h2>
+  <label><input type="checkbox" /> Data Center Architecture & Requirements</label>
+  <label><input type="checkbox" /> Physical Area, Power, Cooling & Bandwidth Needs</label>
+  <label><input type="checkbox" /> Budget & Location Planning</label>
+  <label><input type="checkbox" /> Safety from Natural & Man-Made Disasters</label>
+  <label><input type="checkbox" /> Availability of Technical Talent & Utilities</label>
+  <label><input type="checkbox" /> Selecting and Designing the Data Center</label>
+  <label><input type="checkbox" /> Raised Floor Design & Protection Against Vandalism</label>
+  <label><input type="checkbox" /> Modular Cabling Design & Points of Distribution</label>
+  <label><input type="checkbox" /> ISP Network Infrastructure & WAN Links</label>
+  <label><input type="checkbox" /> Network Operations Center & Monitoring</label>
+  <label><input type="checkbox" /> Physical & Logical Security Guidelines</label>
+  <label><input type="checkbox" /> Data Center Consolidation & Server Capacity Planning</label>
+  <label><input type="checkbox" /> Disaster Recovery Planning</label>
+  <label><input type="checkbox" /> Internet & Source Security Issues</label>
+  <label><input type="checkbox" /> System Administration Best Practices</label>
+  <label><input type="checkbox" /> Automation of System Administration Tasks</label>
+</div>
+
+
+
+<div class="section" id="devops">
+  <h2>DevOps (32 Theory Hrs + 42 Lab Hrs)</h2>
+
+  <label><input type="checkbox" /> Introduction of virtualization & types (Type 1, Type 2)</label>
+  <label><input type="checkbox" /> Virtualization concepts: Hardware, Para-Virtualization, Cloning, Snapshot, Template</label>
+  <label><input type="checkbox" /> Operating System Virtualization</label>
+  <label><input type="checkbox" /> Cluster Architecture and Requirements</label>
+  <label><input type="checkbox" /> Lab: Create and configure VM using VirtualBox; Deploy code on VM</label>
+
+  <label><input type="checkbox" /> Storage Area Network (SAN) configuration using FreeNAS</label>
+  <label><input type="checkbox" /> ZFS Volume, IP-based Storage, Object Storage Services</label>
+  <label><input type="checkbox" /> Lab: Configure FreeNAS SAN, setup MPIO, NFS, CIFS/SMB, MinIO</label>
+
+  <label><input type="checkbox" /> Introduction to Cloud, SPI Models, Deployment Models (Public/Private/Hybrid)</label>
+  <label><input type="checkbox" /> Cloud Security (SLA, IAM), Cloud Architecture, IaaS, PaaS, SaaS</label>
+  <label><input type="checkbox" /> Cloud Services (Compute, Storage, Database, Dev Tools, Security, etc.)</label>
+  <label><input type="checkbox" /> Cloud Development Best Practices, OpenStack, HCI, SDN</label>
+  <label><input type="checkbox" /> Lab: Explore cloud provider services, configure SDN Virtual Network</label>
+
+  <label><input type="checkbox" /> Cloud API Integration, DC/DR Migration & Synchronization</label>
+  <label><input type="checkbox" /> Bootstrapping Chef/Puppet Server, Physical-to-Cloud Migration</label>
+  <label><input type="checkbox" /> Lab: Cloud API setup, Automated migration, High Availability with Configuration Mgmt</label>
+
+  <label><input type="checkbox" /> Centralized Logging, Nagios, Prometheus (Next Gen NMS)</label>
+  <label><input type="checkbox" /> Auto-scaling, Auto-healing, Zero Downtime Updates</label>
+  <label><input type="checkbox" /> Lab: Configure Nagios for Linux & Windows monitoring</label>
+
+  <label><input type="checkbox" /> Agile, Scrum, Kanban, Lean Methodologies</label>
+  <label><input type="checkbox" /> Lab: Agile Fundamentals, Lean Implementation in DevOps</label>
+
+  <label><input type="checkbox" /> Introduction to DevOps, Ecosystem, Phases</label>
+  <label><input type="checkbox" /> CAMS Model, Kaizen, Immutable Deployment</label>
+  <label><input type="checkbox" /> CI/CD Pipelines, IAM, LXC, Docker, KVM</label>
+  <label><input type="checkbox" /> Lab: Create httpd container, Docker image, push to Docker Hub</label>
+
+  <label><input type="checkbox" /> Git & GitHub Fundamentals (Clone, Commit, Push, Workflow)</label>
+  <label><input type="checkbox" /> Jenkins & CI/CD pipeline using Jenkins, Docker, GitHub</label>
+  <label><input type="checkbox" /> Lab: CI/CD automation using httpd and NGINX images</label>
+
+  <label><input type="checkbox" /> AWS Services: EC2, Lambda, S3, VPC</label>
+  <label><input type="checkbox" /> Lab: Create EC2, Lambda, S3 bucket, VPC (with public/private subnets)</label>
+
+  <label><input type="checkbox" /> Infrastructure as Code, Containerization, Docker, Kubernetes</label>
+  <label><input type="checkbox" /> Lab: Create Docker image/service, setup Kubernetes cluster</label>
+
+  <label><input type="checkbox" /> Ansible: Setup Environment, Playbooks, Inventory, Roles</label>
+  <label><input type="checkbox" /> Lab: Configure web server and DB with Ansible roles/playbooks</label>
+
+  <label><input type="checkbox" /> Terraform: Setup, Configuration Files, State Management, Modules</label>
+  <label><input type="checkbox" /> Lab: Provision AWS resources using Terraform and remote backend</label>
+</div>
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const progress = document.getElementById('progress');
+
+  function updateProgress() {
+    const total = checkboxes.length;
+    const checked = Array.from(checkboxes).filter(box => box.checked).length;
+    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+  }
+
+  checkboxes.forEach((box, index) => {
+    const key = 'itim-' + index;
+    const saved = localStorage.getItem(key);
+    if (saved === 'true') box.checked = true;
+
+    box.addEventListener('change', () => {
+      localStorage.setItem(key, box.checked);
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>

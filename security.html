@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG-DITISS Security Concepts Checklist</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .session {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #progress {
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s, background 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+      <ul>
+       <li><a href="index.html">Aptitude</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="fcn.html">CN</a></li>
+        <li><a href="os.html">OS </a></li>
+        <li><a href="cyb_for.html">Cyber</a></li>
+        <li><a href="ndc.html">NDC</a></li>
+        <li><a href="pki.html">PKI</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+        
+        <li><a href="devops.html">DevOps</a></li>
+      </ul>
+    </nav>
+<h1>🔒 PG-DITISS Security Concepts Checklist</h1>
+<p id="progress">Progress: 0 of 0 topics completed</p>
+
+<!-- =================== SECTION A =================== -->
+<div class="section" id="appsec">
+  <h2>A. Application Security (Web Application Security)</h2>
+  
+  <label><input type="checkbox" /> OWASP Top 10 – 2021 Overview</label>
+  <label><input type="checkbox" /> Injection, Inclusion, Cross-Site Scripting (XSS)</label>
+  <label><input type="checkbox" /> Injection in Stored Procedures</label>
+  <label><input type="checkbox" /> Lab: SQL Injection – Bypass Authentication</label>
+  <label><input type="checkbox" /> Lab: Create and Test Cross-Site Script in Web App</label>
+
+  <label><input type="checkbox" /> Denial of Service (DoS)</label>
+  <label><input type="checkbox" /> Buffer Overflow and Input Validation</label>
+  <label><input type="checkbox" /> Access Control</label>
+  <label><input type="checkbox" /> Lab: Perform DoS Attack on Test Server</label>
+  <label><input type="checkbox" /> Lab: Input Validation in Vulnerable Web App</label>
+
+  <label><input type="checkbox" /> Web App Security Risks & Threat Modelling</label>
+  <label><input type="checkbox" /> Overview of Burp Suite and HTTP Fields</label>
+  <label><input type="checkbox" /> Lab: Use Burp Suite to Identify Vulnerabilities</label>
+  <label><input type="checkbox" /> Lab: Configure Burp Suite and Scan Web App</label>
+
+  <label><input type="checkbox" /> Data Extraction & Advanced Exploitation</label>
+  <label><input type="checkbox" /> Lab: Analyze Web App using Wireshark</label>
+  <label><input type="checkbox" /> Lab: Test HTTP Methods (1.0 & 1.1)</label>
+
+  <label><input type="checkbox" /> SAST and DAST Tools Overview</label>
+  <label><input type="checkbox" /> Case Study: Web Application Framework</label>
+  <label><input type="checkbox" /> Lab: Perform Static & Dynamic Security Testing</label>
+</div>
+
+<!-- =================== SECTION B =================== -->
+<div class="section" id="ethical">
+  <h2>B. Ethical Hacking (30 hrs Theory + 36 hrs Lab)</h2>
+
+  <label><input type="checkbox" /> Security Management Concepts & Threats</label>
+  <label><input type="checkbox" /> Human Factors in Security</label>
+  <label><input type="checkbox" /> Mobile/Wireless Threats & Credit Card Frauds</label>
+  <label><input type="checkbox" /> Cyber Crimes & Legal Aspects</label>
+  <label><input type="checkbox" /> Ethical Hacking Concepts, Phases & Terminology</label>
+
+  <label><input type="checkbox" /> Hacker Classes (Red, Blue, Grey Teams)</label>
+  <label><input type="checkbox" /> Goals of Attackers and Skill Requirements</label>
+  <label><input type="checkbox" /> Footprinting, Port & Vulnerability Scanning</label>
+  <label><input type="checkbox" /> Lab: Use NMAP, WHOIS, FOCA, Recon-ng</label>
+  <label><input type="checkbox" /> Lab: Burp Suite Reconnaissance & Spidering</label>
+
+  <label><input type="checkbox" /> TCP Flags, Banner Grabbing, OS Fingerprinting</label>
+  <label><input type="checkbox" /> IP Spoofing, DNS Recon, Enumeration, DDoS</label>
+  <label><input type="checkbox" /> Lab: Use Nessus, Nmap for Vulnerability Scanning</label>
+
+  <label><input type="checkbox" /> Password Cracking & Countermeasures</label>
+  <label><input type="checkbox" /> Trojans, Backdoors, Spyware, Keyloggers</label>
+  <label><input type="checkbox" /> Lab: Password Cracking in Kali Linux</label>
+
+  <label><input type="checkbox" /> Viruses, Worms & Antivirus Evasion Techniques</label>
+  <label><input type="checkbox" /> Sniffing: ARP Poisoning, DNS Spoofing, MAC Flooding</label>
+  <label><input type="checkbox" /> DoS & DDoS Attacks, Botnets, Session Hijacking</label>
+  <label><input type="checkbox" /> Web & Wireless Hacking (WEP/WPA, SSID, MAC Spoofing)</label>
+  <label><input type="checkbox" /> Lab: SNORT/NAGIOS IDS Setup, DMZ Installation</label>
+
+  <label><input type="checkbox" /> Physical Security & Penetration Testing</label>
+  <label><input type="checkbox" /> Lab: Use Metasploit for Penetration Testing</label>
+
+  <label><input type="checkbox" /> Malware Reverse Engineering</label>
+  <label><input type="checkbox" /> Lab: Static/Dynamic Malware Analysis, Case Study</label>
+</div>
+
+<!-- =================== SECTION C =================== -->
+<div class="section" id="mobile">
+  <h2>C. Mobile Security (10 hrs Theory + 10 hrs Lab)</h2>
+
+  <label><input type="checkbox" /> Android Architecture, File Structure, Build Process</label>
+  <label><input type="checkbox" /> Android App Fundamentals & Security Model</label>
+  <label><input type="checkbox" /> Device Rooting</label>
+  <label><input type="checkbox" /> Lab: Android Emulator Setup</label>
+
+  <label><input type="checkbox" /> Android Debug Bridge & Pen Testing Tools</label>
+  <label><input type="checkbox" /> Lab: ADB-based Penetration Testing</label>
+
+  <label><input type="checkbox" /> OWASP Top 10 Mobile App Vulnerabilities</label>
+  <label><input type="checkbox" /> Attacks on Android Apps</label>
+  <label><input type="checkbox" /> Lab: Reverse Engineering & Smishing Attack</label>
+
+  <label><input type="checkbox" /> Web/Network/Social Engineering Attacks</label>
+  <label><input type="checkbox" /> Lab: MITM, Wireshark Packet Sniffing, Phishing</label>
+
+  <label><input type="checkbox" /> Mobile Malware Overview & Android App Analysis</label>
+  <label><input type="checkbox" /> Lab: Static & Dynamic App Analysis (MobSF)</label>
+</div>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const progress = document.getElementById('progress');
+
+  function updateProgress() {
+    const total = checkboxes.length;
+    const checked = Array.from(checkboxes).filter(box => box.checked).length;
+    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+  }
+
+  checkboxes.forEach((box, index) => {
+    const key = 'security-' + index;
+    const saved = localStorage.getItem(key);
+    if (saved === 'true') box.checked = true;
+
+    box.addEventListener('change', () => {
+      localStorage.setItem(key, box.checked);
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>

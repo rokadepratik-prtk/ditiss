@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCEE Syllabus Checklist</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .session {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #progress {
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s, background 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+      <ul>
+          <li><a href="index.html">Aptitude</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="fcn.html">CN</a></li>
+        <li><a href="os.html">OS </a></li>
+        <li><a href="cyb_for.html">Cyber</a></li>
+        <li><a href="ndc.html">NDC</a></li>
+        <li><a href="pki.html">PKI</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+               <li><a href="itim.html">DevOps</a></li>
+      </ul>
+    </nav>
+
+
+  <h1>📝 CCEE Exam Syllabus Checklist</h1>
+
+  <div class="section" id="core">
+    <h2>Core Concepts of Networking</h2>
+    <label><input type="checkbox" /> Internetworking and network types</label>
+    <label><input type="checkbox" /> OSI and TCP/IP models</label>
+    <label><input type="checkbox" /> Ethernet and wireless networking</label>
+    <label><input type="checkbox" /> Internet Protocol (IP)</label>
+    <label><input type="checkbox" /> TCP vs UDP</label>
+  </div>
+
+  <div class="section" id="subnetting">
+    <h2>IP Addressing & Subnetting</h2>
+    <label><input type="checkbox" /> Subnetting techniques</label>
+    <label><input type="checkbox" /> VLSM</label>
+    <label><input type="checkbox" /> Network and host portions</label>
+    <label><input type="checkbox" /> Subnet design</label>
+    <label><input type="checkbox" /> CIDR notation</label>
+  </div>
+
+  <div class="section" id="routing">
+    <h2>Routing Protocols</h2>
+    <label><input type="checkbox" /> Static and dynamic routing</label>
+    <label><input type="checkbox" /> RIP, IGRP, EIGRP, OSPF</label>
+    <label><input type="checkbox" /> Route advertisement</label>
+  </div>
+
+  <div class="section" id="sdn">
+    <h2>SDN & OpenFlow</h2>
+    <label><input type="checkbox" /> SDN architecture</label>
+    <label><input type="checkbox" /> OpenFlow and OpenDaylight</label>
+    <label><input type="checkbox" /> Virtual networking and use cases</label>
+  </div>
+
+  <script>
+    // Save checkbox state to localStorage
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((box, index) => {
+      const saved = localStorage.getItem('checkbox' + index);
+      if (saved === 'true') box.checked = true;
+
+      box.addEventListener('change', () => {
+        localStorage.setItem('checkbox' + index, box.checked);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aptitude & Effective Communication - PG-DITISS</title>
+  <title>Compliance Audit - PG-DITISS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -84,7 +84,7 @@
 
   <nav>
     <ul>
-       <li><a href="index.html">Aptitude</a></li>
+      <li><a href="aptitude.html">Aptitude</a></li>
       <li><a href="security.html">Security</a></li>
       <li><a href="fcn.html">CN</a></li>
       <li><a href="os.html">OS</a></li>
@@ -92,44 +92,34 @@
       <li><a href="ndc.html">NDC</a></li>
       <li><a href="pki.html">PKI</a></li>
       <li><a href="programming.html">Programming</a></li>
-      <li><a href="compliance.html">Compliance</a></li>
+      <li><a href="compliance.html" class="active">Compliance</a></li>
       <li><a href="itim.html">DevOps</a></li>
     </ul>
   </nav>
 
-  <h1>Aptitude & Effective Communication Checklist</h1>
+  <h1>Compliance Audit (CD) Checklist</h1>
   <p id="progress">Progress: 0 of 0 topics completed</p>
 
-  <div id="sessions">
-    <!-- Sessions will be injected here -->
-  </div>
+  <div id="sessions"></div>
 
   <footer>
-    <p>© 2025 ACTS Pune | PG-DITISS | Aptitude & Effective Communication Module</p>
+    <p>© 2025 ACTS Pune | PG-DITISS | Compliance Audit Module</p>
   </footer>
 
   <script>
     const topics = [
-      ["Unit Digit", "Last 2 Digits", "Remainder", "Divisibility", "Cyclicity", "Fast Maths", "Simplification", "LCM & HCF"],
-      ["Ratio and Proportion", "Partnership"],
-      ["Percentage", "Profit and Loss"],
-      ["Simple Interest", "Compound Interest"],
-      ["Time, Speed and Distance", "Trains"],
-      ["Time and Work", "Wages"],
-      ["Pipes and Cisterns", "Boats and Streams"],
-      ["Averages", "Mixtures and Alligations"],
-      ["Probability"],
-      ["Permutations and Combinations"],
-      ["Number Series", "Alphabetical Series", "Repetitive Series"],
-      ["Blood Relations"],
-      ["Coding-Decoding"],
-      ["Seating Arrangement"],
-      ["Syllogism", "Venn Diagram"],
-      ["Data Interpretation", "Data Sufficiency"],
-      ["Problems on Ages", "Clock & Calendar"],
-      ["Alphabetical Reasoning", "Ranking & Order"],
-      ["Direction Sense", "Puzzles"],
-      ["Statements & Arguments", "Statements & Conclusions", "Statements & Assumptions"]
+      ["Introduction", "Cybersecurity Challenges for Organizations", "Compliance Basics", "Types of Security Audit", "Audit Decision Factors", "Security Audit Phases", "Requirements of Internal Audit Team", "Principles of Audits", "Auditor Personal Abilities"],
+      ["Security Evaluation Concepts", "Evaluation Process", "Evaluation Phases", "Assurance – Seven Evaluation Levels", "Evaluation Methodology"],
+      ["Overview of NIST", "Components of the Framework", "Use of Framework in Organizations"],
+      ["Overview of GDPR", "Types of Privacy Data GDPR Protects", "Key Steps to Ensure GDPR Compliance"],
+      ["Introduction to ISO/IEC 2700x", "How the Standard Works", "History of ISO/IEC 27001", "ISO/IEC 27001:2005 Domains", "Structure of Standards"],
+      ["SOX Reports (Sarbanes–Oxley Act)", "SOC Reports – Auditor Process Overview", "SOX Compliance and Security Controls"],
+      ["Overview of COBIT Framework", "COBIT Components", "COBIT vs ITIL"],
+      ["Overview of HIPAA Regulations", "HIPAA Titles", "HIPAA Rules"],
+      ["History of PCI-DSS", "PCI DSS Levels", "PCI DSS Requirements Overview"],
+      ["CIS Critical Security Controls", "CIS Compliance", "CIS Controls", "CIS Benchmarks"],
+      ["History and the Need for SSE-CMM", "Overview and Components", "Using the SSE-CMM", "SSE-CMM Pilots"],
+      ["Information Technology Act (ITAA) 2008", "Digital Personal Data Protection Act 2023", "Internal Audit Solution for a Global Bank", "Compliance Strategy for a Healthcare Provider", "GDPR Implementation in a European Tech Firm"]
     ];
 
     const sessionsContainer = document.getElementById("sessions");
@@ -147,7 +137,7 @@
         const label = document.createElement("label");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        const key = `aptitude-${index}-${tIndex}`;
+        const key = `compliance-${index}-${tIndex}`;
         checkbox.dataset.key = key;
         if (localStorage.getItem(key) === "true") checkbox.checked = true;
         label.appendChild(checkbox);

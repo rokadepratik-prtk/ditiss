@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG-DITISS Network Defense & Countermeasures (NDC)</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+    .session {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #progress {
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav li {
+      margin: 5px 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s, background 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+      <ul>
+         <li><a href="index.html">Aptitude</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="fcn.html">CN</a></li>
+        <li><a href="os.html">OS </a></li>
+        <li><a href="cyb_for.html">Cyber</a></li>
+        <li><a href="ndc.html">NDC</a></li>
+        <li><a href="pki.html">PKI</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+               <li><a href="itim.html">DevOps</a></li>
+      </ul>
+    </nav>
+
+<h1>🛡️ Network Defense & Countermeasures (PG-DITISS)</h1>
+<p id="progress">Progress: 0 of 0 topics completed</p>
+
+<!-- Session 1 -->
+<div class="section">
+  <h2>Session 1: Introduction to Information Security</h2>
+  <label><input type="checkbox" /> Introduction to Information Security</label>
+  <label><input type="checkbox" /> Why Information Security?</label>
+  <label><input type="checkbox" /> Security: The Money Factor</label>
+  <label><input type="checkbox" /> Internet Statistics – Security Perspective</label>
+  <label><input type="checkbox" /> Vulnerability, Threat, and Risk</label>
+  <label><input type="checkbox" /> Quality of Service (QoS)</label>
+  <h3>Lab 1:</h3>
+  <label><input type="checkbox" /> Install & Configure Antivirus Software</label>
+  <label><input type="checkbox" /> Analyze Internet Security Stats (OWASP)</label>
+  <label><input type="checkbox" /> Conduct Vulnerability Scan with OpenVAS</label>
+  <label><input type="checkbox" /> Simulate Network Traffic & Measure QoS (Wireshark)</label>
+</div>
+
+<!-- Session 2 -->
+<div class="section">
+  <h2>Session 2: Risk Management & Firewalls</h2>
+  <label><input type="checkbox" /> Risk Management, Exposure, Countermeasures</label>
+  <label><input type="checkbox" /> Firewall Concepts</label>
+  <label><input type="checkbox" /> Demilitarized Zone (DMZ)</label>
+  <label><input type="checkbox" /> Firewall Implementation Methods</label>
+  <h3>Lab 2:</h3>
+  <label><input type="checkbox" /> Identify Network Risks (NIST Framework)</label>
+  <label><input type="checkbox" /> Install pfSense Firewall</label>
+  <label><input type="checkbox" /> Configure DMZ with pfSense</label>
+  <label><input type="checkbox" /> Compare iptables vs Squid Firewalls</label>
+</div>
+
+<!-- Session 3 -->
+<div class="section">
+  <h2>Session 3: Firewall Types & iptables</h2>
+  <label><input type="checkbox" /> Packet Filtering</label>
+  <label><input type="checkbox" /> Screened Host Firewall</label>
+  <label><input type="checkbox" /> Stateful Inspection Firewall</label>
+  <label><input type="checkbox" /> Next-Gen Firewall Controls</label>
+  <label><input type="checkbox" /> iptables – Linux Firewall</label>
+  <h3>Lab 3:</h3>
+  <label><input type="checkbox" /> iptables Rule Processing & Default Policy</label>
+  <label><input type="checkbox" /> Predefined Tables (INPUT, OUTPUT, FORWARD)</label>
+</div>
+
+<div class="section">
+  <h2>Lab 4–6: Advanced iptables</h2>
+  <label><input type="checkbox" /> Explore Xtables-Addons & Verify Netfilter</label>
+  <label><input type="checkbox" /> Understand Targets: DROP, ACCEPT</label>
+  <label><input type="checkbox" /> Setup SPI Firewall (IPv4 & IPv6)</label>
+  <label><input type="checkbox" /> Automate iptables via Bash Scripting</label>
+  <label><input type="checkbox" /> Geo-IP Blocking with Xtables-Addons</label>
+  <label><input type="checkbox" /> Configure Internet Sharing with iptables</label>
+</div>
+
+<!-- Session 4 -->
+<div class="section">
+  <h2>Session 4: Wireshark Analysis</h2>
+  <label><input type="checkbox" /> Wireshark Basics</label>
+  <label><input type="checkbox" /> Create Filters for Data Collection</label>
+  <label><input type="checkbox" /> Analyze Real-world Captures</label>
+  <h3>Lab 7:</h3>
+  <label><input type="checkbox" /> Examine Packet Captures</label>
+  <label><input type="checkbox" /> Configure Port Forwarding in iptables</label>
+  <label><input type="checkbox" /> Use Fail2ban with iptables</label>
+</div>
+
+<!-- Session 5 -->
+<div class="section">
+  <h2>Session 5: Firewalls & Load Balancing</h2>
+  <label><input type="checkbox" /> Linux Firewalls (ClearOS, pfSense)</label>
+  <label><input type="checkbox" /> Nginx & Squid Reverse Proxy</label>
+  <label><input type="checkbox" /> Unified Threat Management (UTM)</label>
+  <label><input type="checkbox" /> Server Load Balancing</label>
+  <h3>Lab 8:</h3>
+  <label><input type="checkbox" /> Configure Reverse Proxy using Regex</label>
+  <label><input type="checkbox" /> Setup Server Farming</label>
+</div>
+
+<!-- Session 6–8: VPN -->
+<div class="section">
+  <h2>Sessions 6–8: VPN Setup & Configuration</h2>
+  <label><input type="checkbox" /> VPN Introduction, Types, and Protocols</label>
+  <label><input type="checkbox" /> OpenVPN on Linux & Windows</label>
+  <label><input type="checkbox" /> Site-to-Site Connectivity</label>
+  <label><input type="checkbox" /> Certificate & Password Authentication</label>
+  <label><input type="checkbox" /> pfSense Installation & Configuration</label>
+  <label><input type="checkbox" /> UTM Setup & Access Control</label>
+  <label><input type="checkbox" /> Hybrid VPN, IPsec, Tunnel/Transport Mode</label>
+  <label><input type="checkbox" /> IPv6 VPN & Split/Full Tunneling</label>
+</div>
+
+<!-- IDS / IPS -->
+<div class="section">
+  <h2>Sessions 9–11: IDS, IPS & Threat Analysis</h2>
+  <label><input type="checkbox" /> Introduction to IDS & IPS</label>
+  <label><input type="checkbox" /> Types of Attacks & Detection</label>
+  <label><input type="checkbox" /> Threat Hunting Model</label>
+  <label><input type="checkbox" /> Snort (NIDS) & OSSEC (HIDS)</label>
+  <label><input type="checkbox" /> Suricata as IPS</label>
+  <label><input type="checkbox" /> Analyze Traffic Logs with ELK Stack</label>
+</div>
+
+<!-- Session 12–13 -->
+<div class="section">
+  <h2>Sessions 12–13: Sensors, DoS & Mitigation</h2>
+  <label><input type="checkbox" /> DoS & DDoS Mitigation</label>
+  <label><input type="checkbox" /> Three-tier Architecture Deployment</label>
+  <label><input type="checkbox" /> Configure Network & Host Sensors</label>
+  <label><input type="checkbox" /> Simulate DoS using LOIC & Mitigate</label>
+</div>
+
+<!-- Session 14–15 -->
+<div class="section">
+  <h2>Sessions 14–15: SIEM & Monitoring</h2>
+  <label><input type="checkbox" /> Log Analysis & Correlation</label>
+  <label><input type="checkbox" /> SIEM Configuration & Event Triggering</label>
+  <label><input type="checkbox" /> Write Snort Rules, Setup Syslog Server</label>
+  <label><input type="checkbox" /> Nagios Sensor Configuration (Linux & Windows)</label>
+  <label><input type="checkbox" /> Email Alerts & Resource Monitoring</label>
+</div>
+
+<script>
+  const boxes = document.querySelectorAll('input[type="checkbox"]');
+  const progress = document.getElementById('progress');
+
+  function updateProgress() {
+    const total = boxes.length;
+    const done = Array.from(boxes).filter(b => b.checked).length;
+    progress.textContent = `Progress: ${done} of ${total} topics completed`;
+  }
+
+  boxes.forEach((box, i) => {
+    const key = 'ndc-' + i;
+    const saved = localStorage.getItem(key);
+    if (saved === 'true') box.checked = true;
+    box.addEventListener('change', () => {
+      localStorage.setItem(key, box.checked);
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>
