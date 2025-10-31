@@ -12,13 +12,9 @@
       max-width: 1000px;
       margin: auto;
     }
-    h1, h2 {
+    h1 {
       color: #2c3e50;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-      margin-top: 40px;
+      text-align: center;
     }
     label {
       display: block;
@@ -30,10 +26,10 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .checklist {
       background: #fff;
       padding: 15px;
-      margin-bottom: 20px;
+      margin-top: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
@@ -82,7 +78,7 @@
 </head>
 <body>
 
-   <nav>
+  <nav>
     <ul>
       <li><a href="index.html">Apti</a></li>
       <li><a href="security.html">Security</a></li>
@@ -94,72 +90,61 @@
       <li><a href="programming.html">PC</a></li>
       <li><a href="compliance.html">C&A</a></li>
       <li><a href="itim.html">DevOps</a></li>
-      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
-</li>
+      <li><a href="dashboard.html">Dashboard</a></li>
     </ul>
   </nav>
 
-  <h1>Aptitude & Effective Communication Checklist</h1>
+  <h1>🧠 Aptitude & Effective Communication Checklist</h1>
   <p id="progress">Progress: 0 of 0 topics completed</p>
 
-  <div id="sessions">
-    <!-- Sessions will be injected here -->
+  <div class="checklist" id="checklist">
+    <!-- Topics will be injected here -->
   </div>
 
-  <footer style="text-align: center; margin-top: 40px; color: #555;">
-  <p>&copy; 2025 <strong>Pratik Rokade</strong>. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 <strong>Pratik Rokade</strong>. All rights reserved.</p>
+  </footer>
 
   <script>
     const topics = [
-      ["Unit Digit", "Last 2 Digits", "Remainder", "Divisibility", "Cyclicity", "Fast Maths", "Simplification", "LCM & HCF"],
-      ["Ratio and Proportion", "Partnership"],
-      ["Percentage", "Profit and Loss"],
-      ["Simple Interest", "Compound Interest"],
-      ["Time, Speed and Distance", "Trains"],
-      ["Time and Work", "Wages"],
-      ["Pipes and Cisterns", "Boats and Streams"],
-      ["Averages", "Mixtures and Alligations"],
-      ["Probability"],
-      ["Permutations and Combinations"],
-      ["Number Series", "Alphabetical Series", "Repetitive Series"],
-      ["Blood Relations"],
-      ["Coding-Decoding"],
-      ["Seating Arrangement"],
-      ["Syllogism", "Venn Diagram"],
-      ["Data Interpretation", "Data Sufficiency"],
-      ["Problems on Ages", "Clock & Calendar"],
-      ["Alphabetical Reasoning", "Ranking & Order"],
-      ["Direction Sense", "Puzzles"],
-      ["Statements & Arguments", "Statements & Conclusions", "Statements & Assumptions"]
+      "Unit Digit", "Last 2 Digits", "Remainder", "Divisibility", "Cyclicity", "Fast Maths", "Simplification", "LCM & HCF",
+      "Ratio and Proportion", "Partnership",
+      "Percentage", "Profit and Loss",
+      "Simple Interest", "Compound Interest",
+      "Time, Speed and Distance", "Trains",
+      "Time and Work", "Wages",
+      "Pipes and Cisterns", "Boats and Streams",
+      "Averages", "Mixtures and Alligations",
+      "Probability",
+      "Permutations and Combinations",
+      "Number Series", "Alphabetical Series", "Repetitive Series",
+      "Blood Relations",
+      "Coding-Decoding",
+      "Seating Arrangement",
+      "Syllogism", "Venn Diagram",
+      "Data Interpretation", "Data Sufficiency",
+      "Problems on Ages", "Clock & Calendar",
+      "Alphabetical Reasoning", "Ranking & Order",
+      "Direction Sense", "Puzzles",
+      "Statements & Arguments", "Statements & Conclusions", "Statements & Assumptions"
     ];
 
-    const sessionsContainer = document.getElementById("sessions");
+    const checklistContainer = document.getElementById("checklist");
     const progress = document.getElementById("progress");
-    let total = 0;
+    let total = topics.length;
 
-    topics.forEach((sessionTopics, index) => {
-      const sessionDiv = document.createElement("div");
-      sessionDiv.className = "session";
-      const sessionTitle = document.createElement("h2");
-      sessionTitle.textContent = `Session ${index + 1}`;
-      sessionDiv.appendChild(sessionTitle);
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `aptitude-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
 
-      sessionTopics.forEach((topic, tIndex) => {
-        const label = document.createElement("label");
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        const key = `aptitude-${index}-${tIndex}`;
-        checkbox.dataset.key = key;
-        if (localStorage.getItem(key) === "true") checkbox.checked = true;
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(topic));
-        sessionDiv.appendChild(label);
-        total++;
-      });
-
-      sessionsContainer.appendChild(sessionDiv);
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      checklistContainer.appendChild(label);
     });
 
     function updateProgress() {
