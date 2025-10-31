@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PG-DITISS Cyber Forensics Checklist</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
@@ -30,7 +30,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .section {
       background: #fff;
       padding: 15px;
       margin-bottom: 20px;
@@ -82,67 +82,72 @@
 </head>
 <body>
 
-    <nav>
-      <ul>
-          <li><a href="index.html">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
-  <h1>🕵️ PG-DITISS Cyber Forensics Checklist</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Apti</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">PC</a></li>
+      <li><a href="compliance.html">C&A</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
+</li>
+    </ul>
+  </nav>
+
+  <h1>Cyber Forensics Checklist</h1>
   <p id="progress">Progress: 0 of 0 topics completed</p>
 
-  <div class="section" id="sessions">
-    <h2>Sessions</h2>
-    <label><input type="checkbox" /> Overview of Computer Forensics</label>
-    <label><input type="checkbox" /> Cyber Crime vs Unauthorized Activities</label>
-    <label><input type="checkbox" /> Cyber Laws</label>
-    <label><input type="checkbox" /> Process of Computer Forensics</label>
-    <label><input type="checkbox" /> Need for Forensics Investigator</label>
-    <label><input type="checkbox" /> Forensics Process: Preservation to Interpretation</label>
-    <label><input type="checkbox" /> Goals & Techniques of Forensics Analysis</label>
-    <label><input type="checkbox" /> Incident Response Plan & Team</label>
-    <label><input type="checkbox" /> Chain of Custody</label>
-    <label><input type="checkbox" /> Evidence Checkout & Handling</label>
-    <label><input type="checkbox" /> Forensic Duplication & Authentication</label>
-    <label><input type="checkbox" /> Initial Assessment & Notification Checklist</label>
-    <label><input type="checkbox" /> Hexadecimal Notation & Practical Bits</label>
-    <label><input type="checkbox" /> Encoding, Encryption & Hashing</label>
-    <label><input type="checkbox" /> MD5 Collisions & Bit Rot</label>
-    <label><input type="checkbox" /> SOPs for Windows & DOS Crime Scenes</label>
-    <label><input type="checkbox" /> Forensics Implications & Accreditation</label>
-    <label><input type="checkbox" /> Privacy in Cyber Forensics</label>
-    <label><input type="checkbox" /> Forensics Tools: Sysinternals, FTK, OSF</label>
-    <label><input type="checkbox" /> Live System & Linux Forensics</label>
-    <label><input type="checkbox" /> Introduction to Mobile Forensics</label>
+  <div id="sessions">
+    <!-- Checkboxes will be injected here -->
   </div>
 
- 
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | Cyber Forensics Module</p>
+  </footer>
 
   <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const progress = document.getElementById('progress');
+    const topics = [
+      "Overview of Computer Forensics", "Cyber Crime vs Unauthorized Activities", "Cyber Laws",
+      "Process of Computer Forensics", "Need for Forensics Investigator", "Forensics Process: Preservation to Interpretation",
+      "Goals & Techniques of Forensics Analysis", "Incident Response Plan & Team", "Chain of Custody",
+      "Evidence Checkout & Handling", "Forensic Duplication & Authentication", "Initial Assessment & Notification Checklist",
+      "Hexadecimal Notation & Practical Bits", "Encoding, Encryption & Hashing", "MD5 Collisions & Bit Rot",
+      "SOPs for Windows & DOS Crime Scenes", "Forensics Implications & Accreditation", "Privacy in Cyber Forensics",
+      "Forensics Tools: Sysinternals, FTK, OSF", "Live System & Linux Forensics", "Introduction to Mobile Forensics"
+    ];
+
+    const sessionsContainer = document.getElementById("sessions");
+    const progress = document.getElementById("progress");
+    let total = topics.length;
+
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `cyberforensics-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
+
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      sessionsContainer.appendChild(label);
+    });
 
     function updateProgress() {
-      const total = checkboxes.length;
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       const checked = Array.from(checkboxes).filter(box => box.checked).length;
       progress.textContent = `Progress: ${checked} of ${total} topics completed`;
     }
 
-    checkboxes.forEach((box, index) => {
-      const key = 'cyberforensics-' + index;
-      const saved = localStorage.getItem(key);
-      if (saved === 'true') box.checked = true;
-
-      box.addEventListener('change', () => {
-        localStorage.setItem(key, box.checked);
+    document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+      box.addEventListener("change", () => {
+        localStorage.setItem(box.dataset.key, box.checked);
         updateProgress();
       });
     });

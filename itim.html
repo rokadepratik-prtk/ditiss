@@ -81,141 +81,96 @@
   </style>
 </head>
 <body>
-  <nav>
-      <ul>
-          <li><a href="index.html">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
-<h1>🏗️ PG-DITISS IT Infrastructure Management (ITIM) Checklist</h1>
-<p id="progress">Progress: 0 of 0 topics completed</p>
 
-<!-- SECTION: ITIL INTRODUCTION -->
-<div class="section" id="itil">
-  <h2>A. Introduction to ITIL</h2>
-  <label><input type="checkbox" /> Service Strategy Overview</label>
-  <label><input type="checkbox" /> Competition and Market Space</label>
-  <label><input type="checkbox" /> Service Provider Types</label>
-  <label><input type="checkbox" /> Service Management as a Strategic Asset</label>
-  <label><input type="checkbox" /> Financial Management</label>
-  <label><input type="checkbox" /> Service Portfolio & Demand Management</label>
-  <label><input type="checkbox" /> Service Design: Architecture, Processes, and Policies</label>
-  <label><input type="checkbox" /> Service Design Package (SDP)</label>
-  <label><input type="checkbox" /> Service Level and Capacity Management</label>
-  <label><input type="checkbox" /> IT Service Continuity & Security</label>
-  <label><input type="checkbox" /> Service Transition: Configuration & Change Management</label>
-  <label><input type="checkbox" /> Release, Deployment & Knowledge Management</label>
-  <label><input type="checkbox" /> Service Operation: Event, Incident, and Problem Management</label>
-  <label><input type="checkbox" /> Service Desk, Technical & Application Management</label>
-  <label><input type="checkbox" /> Continual Service Improvement (CSI): Roles & Activities</label>
-  <label><input type="checkbox" /> Training, Awareness & Ongoing Scheduling</label>
-</div>
+ <nav>
+    <ul>
+      <li><a href="index.html">Apti</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">PC</a></li>
+      <li><a href="compliance.html">C&A</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
+</li>
+    </ul>
+  </nav>
+  <h1>IT Infrastructure Management (ITIM) Checklist</h1>
+  <p id="progress">Progress: 0 of 0 topics completed</p>
 
-<!-- SECTION: DATA CENTER MANAGEMENT -->
-<div class="section" id="datacenter">
-  <h2>B. Data Center Management</h2>
-  <label><input type="checkbox" /> Data Center Architecture & Requirements</label>
-  <label><input type="checkbox" /> Physical Area, Power, Cooling & Bandwidth Needs</label>
-  <label><input type="checkbox" /> Budget & Location Planning</label>
-  <label><input type="checkbox" /> Safety from Natural & Man-Made Disasters</label>
-  <label><input type="checkbox" /> Availability of Technical Talent & Utilities</label>
-  <label><input type="checkbox" /> Selecting and Designing the Data Center</label>
-  <label><input type="checkbox" /> Raised Floor Design & Protection Against Vandalism</label>
-  <label><input type="checkbox" /> Modular Cabling Design & Points of Distribution</label>
-  <label><input type="checkbox" /> ISP Network Infrastructure & WAN Links</label>
-  <label><input type="checkbox" /> Network Operations Center & Monitoring</label>
-  <label><input type="checkbox" /> Physical & Logical Security Guidelines</label>
-  <label><input type="checkbox" /> Data Center Consolidation & Server Capacity Planning</label>
-  <label><input type="checkbox" /> Disaster Recovery Planning</label>
-  <label><input type="checkbox" /> Internet & Source Security Issues</label>
-  <label><input type="checkbox" /> System Administration Best Practices</label>
-  <label><input type="checkbox" /> Automation of System Administration Tasks</label>
-</div>
+  <div id="sessions"></div>
 
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | ITIM Module</p>
+  </footer>
 
+  <script>
+    const topics = [
+      // Section A: ITIL
+      "Service Strategy Overview", "Competition and Market Space", "Service Provider Types", "Service Management as a Strategic Asset",
+      "Financial Management", "Service Portfolio & Demand Management", "Service Design: Architecture, Processes, and Policies",
+      "Service Design Package (SDP)", "Service Level and Capacity Management", "IT Service Continuity & Security",
+      "Service Transition: Configuration & Change Management", "Release, Deployment & Knowledge Management",
+      "Service Operation: Event, Incident, and Problem Management", "Service Desk, Technical & Application Management",
+      "Continual Service Improvement (CSI): Roles & Activities", "Training, Awareness & Ongoing Scheduling",
 
-<div class="section" id="devops">
-  <h2>DevOps (32 Theory Hrs + 42 Lab Hrs)</h2>
+      // Section B: Data Center
+      "Data Center Architecture & Requirements", "Physical Area, Power, Cooling & Bandwidth Needs", "Budget & Location Planning",
+      "Safety from Natural & Man-Made Disasters", "Availability of Technical Talent & Utilities", "Selecting and Designing the Data Center",
+      "Raised Floor Design & Protection Against Vandalism", "Modular Cabling Design & Points of Distribution",
+      "ISP Network Infrastructure & WAN Links", "Network Operations Center & Monitoring", "Physical & Logical Security Guidelines",
+      "Data Center Consolidation & Server Capacity Planning", "Disaster Recovery Planning", "Internet & Source Security Issues",
+      "System Administration Best Practices", "Automation of System Administration Tasks",
 
-  <label><input type="checkbox" /> Introduction of virtualization & types (Type 1, Type 2)</label>
-  <label><input type="checkbox" /> Virtualization concepts: Hardware, Para-Virtualization, Cloning, Snapshot, Template</label>
-  <label><input type="checkbox" /> Operating System Virtualization</label>
-  <label><input type="checkbox" /> Cluster Architecture and Requirements</label>
-  <label><input type="checkbox" /> Lab: Create and configure VM using VirtualBox; Deploy code on VM</label>
+      // Section C: DevOps
+      "Introduction of virtualization & types", "Virtualization concepts", "Operating System Virtualization", "Cluster Architecture and Requirements",
+      "Lab: VirtualBox VM & code deployment", "SAN configuration using FreeNAS", "ZFS Volume, IP-based Storage, Object Storage Services",
+      "Lab: Configure FreeNAS SAN", "Introduction to Cloud & Models", "Cloud Security & Architecture", "Cloud Services",
+      "Cloud Development Best Practices", "Lab: Cloud provider services", "Cloud API Integration", "Bootstrapping Chef/Puppet",
+      "Lab: Cloud API setup", "Centralized Logging & Monitoring", "Auto-scaling & Zero Downtime", "Lab: Configure Nagios",
+      "Agile, Scrum, Kanban, Lean", "Lab: Agile Fundamentals", "Introduction to DevOps", "CAMS Model & Immutable Deployment",
+      "CI/CD Pipelines & Tools", "Lab: Docker image & push", "Git & GitHub Fundamentals", "Jenkins & CI/CD pipeline",
+      "Lab: CI/CD automation", "AWS Services", "Lab: AWS EC2, Lambda, S3, VPC", "Infrastructure as Code & Kubernetes",
+      "Lab: Docker & Kubernetes", "Ansible Setup & Playbooks", "Lab: Web server & DB with Ansible", "Terraform Setup & Modules",
+      "Lab: Provision AWS with Terraform"
+    ];
 
-  <label><input type="checkbox" /> Storage Area Network (SAN) configuration using FreeNAS</label>
-  <label><input type="checkbox" /> ZFS Volume, IP-based Storage, Object Storage Services</label>
-  <label><input type="checkbox" /> Lab: Configure FreeNAS SAN, setup MPIO, NFS, CIFS/SMB, MinIO</label>
+    const sessionsContainer = document.getElementById("sessions");
+    const progress = document.getElementById("progress");
+    let total = topics.length;
 
-  <label><input type="checkbox" /> Introduction to Cloud, SPI Models, Deployment Models (Public/Private/Hybrid)</label>
-  <label><input type="checkbox" /> Cloud Security (SLA, IAM), Cloud Architecture, IaaS, PaaS, SaaS</label>
-  <label><input type="checkbox" /> Cloud Services (Compute, Storage, Database, Dev Tools, Security, etc.)</label>
-  <label><input type="checkbox" /> Cloud Development Best Practices, OpenStack, HCI, SDN</label>
-  <label><input type="checkbox" /> Lab: Explore cloud provider services, configure SDN Virtual Network</label>
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `itim-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
 
-  <label><input type="checkbox" /> Cloud API Integration, DC/DR Migration & Synchronization</label>
-  <label><input type="checkbox" /> Bootstrapping Chef/Puppet Server, Physical-to-Cloud Migration</label>
-  <label><input type="checkbox" /> Lab: Cloud API setup, Automated migration, High Availability with Configuration Mgmt</label>
-
-  <label><input type="checkbox" /> Centralized Logging, Nagios, Prometheus (Next Gen NMS)</label>
-  <label><input type="checkbox" /> Auto-scaling, Auto-healing, Zero Downtime Updates</label>
-  <label><input type="checkbox" /> Lab: Configure Nagios for Linux & Windows monitoring</label>
-
-  <label><input type="checkbox" /> Agile, Scrum, Kanban, Lean Methodologies</label>
-  <label><input type="checkbox" /> Lab: Agile Fundamentals, Lean Implementation in DevOps</label>
-
-  <label><input type="checkbox" /> Introduction to DevOps, Ecosystem, Phases</label>
-  <label><input type="checkbox" /> CAMS Model, Kaizen, Immutable Deployment</label>
-  <label><input type="checkbox" /> CI/CD Pipelines, IAM, LXC, Docker, KVM</label>
-  <label><input type="checkbox" /> Lab: Create httpd container, Docker image, push to Docker Hub</label>
-
-  <label><input type="checkbox" /> Git & GitHub Fundamentals (Clone, Commit, Push, Workflow)</label>
-  <label><input type="checkbox" /> Jenkins & CI/CD pipeline using Jenkins, Docker, GitHub</label>
-  <label><input type="checkbox" /> Lab: CI/CD automation using httpd and NGINX images</label>
-
-  <label><input type="checkbox" /> AWS Services: EC2, Lambda, S3, VPC</label>
-  <label><input type="checkbox" /> Lab: Create EC2, Lambda, S3 bucket, VPC (with public/private subnets)</label>
-
-  <label><input type="checkbox" /> Infrastructure as Code, Containerization, Docker, Kubernetes</label>
-  <label><input type="checkbox" /> Lab: Create Docker image/service, setup Kubernetes cluster</label>
-
-  <label><input type="checkbox" /> Ansible: Setup Environment, Playbooks, Inventory, Roles</label>
-  <label><input type="checkbox" /> Lab: Configure web server and DB with Ansible roles/playbooks</label>
-
-  <label><input type="checkbox" /> Terraform: Setup, Configuration Files, State Management, Modules</label>
-  <label><input type="checkbox" /> Lab: Provision AWS resources using Terraform and remote backend</label>
-</div>
-<script>
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const progress = document.getElementById('progress');
-
-  function updateProgress() {
-    const total = checkboxes.length;
-    const checked = Array.from(checkboxes).filter(box => box.checked).length;
-    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
-  }
-
-  checkboxes.forEach((box, index) => {
-    const key = 'itim-' + index;
-    const saved = localStorage.getItem(key);
-    if (saved === 'true') box.checked = true;
-
-    box.addEventListener('change', () => {
-      localStorage.setItem(key, box.checked);
-      updateProgress();
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      sessionsContainer.appendChild(label);
     });
-  });
 
-  updateProgress();
-</script>
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const checked = Array.from(checkboxes).filter(box => box.checked).length;
+      progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+      box.addEventListener("change", () => {
+        localStorage.setItem(box.dataset.key, box.checked);
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  </script>
 
 </body>
 </html>

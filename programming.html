@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PG-DITISS Programming Concepts Checklist</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
@@ -30,7 +30,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .section {
       background: #fff;
       padding: 15px;
       margin-bottom: 20px;
@@ -82,108 +82,92 @@
 </head>
 <body>
 
-   <nav>
-      <ul>
-        <li><a href="aptitude.html" class="active">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Apti</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">PC</a></li>
+      <li><a href="compliance.html">C&A</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
+</li>
+    </ul>
+  </nav>
 
+  <h1>Programming Concepts Checklist</h1>
+  <p id="progress">Progress: 0 of 0 topics completed</p>
 
-<h1>💻 PG-DITISS Programming Concepts Checklist</h1>
-<p id="progress">Progress: 0 of 0 topics completed</p>
+  <div id="sessions">
+    <!-- Checkboxes will be injected here -->
+  </div>
 
-<!-- ===== SECTION: MYSQL ===== -->
-<div class="section" id="mysql">
-  <h2>A. MySQL (10 Theory hrs + 10 Lab hrs)</h2>
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | Programming Concepts Module</p>
+  </footer>
 
-  <label><input type="checkbox" /> Concepts of Databases, Tables, Schemas</label>
-  <label><input type="checkbox" /> Create, Organize & Drop Databases (Syntax & Best Practices)</label>
-  <label><input type="checkbox" /> Lab: Create MySQL User, Database, Tables, Insert Data</label>
-  <label><input type="checkbox" /> Lab: Delete / Modify Table or Database</label>
+  <script>
+    const topics = [
+      // MySQL Section
+      "Concepts of Databases, Tables, Schemas", "Create, Organize & Drop Databases (Syntax & Best Practices)",
+      "Lab: Create MySQL User, Database, Tables, Insert Data", "Lab: Delete / Modify Table or Database",
+      "SELECT Statements to Fetch Data", "WHERE Clause for Filtering Data", "ORDER BY for Sorting Data",
+      "Basic JOIN Operations (Combine Multiple Tables)", "Lab: Write SELECT queries with WHERE and ORDER BY",
+      "Aggregate Functions (SUM, COUNT, AVG)", "GROUP BY and HAVING Clauses", "Subqueries and Nested Queries",
+      "Lab: Apply Aggregate, GROUP BY, and HAVING Functions",
 
-  <label><input type="checkbox" /> SELECT Statements to Fetch Data</label>
-  <label><input type="checkbox" /> WHERE Clause for Filtering Data</label>
-  <label><input type="checkbox" /> ORDER BY for Sorting Data</label>
-  <label><input type="checkbox" /> Basic JOIN Operations (Combine Multiple Tables)</label>
-  <label><input type="checkbox" /> Lab: Write SELECT queries with WHERE and ORDER BY</label>
+      // Python Section
+      "Installing Python, First Python Program", "Declaring Functions, Code Indentation, Native Data Types",
+      "Lab: Install Python on Windows/Linux, Print 'Hello World'", "Lab: Use Loops, If-Else, and User Input",
+      "Dictionaries: Define, Modify, Delete Items", "Lists: Create, Add, Search, Delete, Use Operators",
+      "Lab: Create Dictionary, Use Loops, Insert/Delete Elements", "Tuples: Declare, Reference, Assign Multiple Values",
+      "Join Lists, Split Strings, Introduction to Sets", "Lab: Create Tuple and Perform Insert/Delete Operations",
+      "Optional & Named Arguments, Built-in Functions (type, str, dir)", "Object References, Socket Programming Basics",
+      "Lab: Append, Insert, Remove, Sort on Lists & Strings", "Regular Expressions, Scripting, Functional Programming",
+      "Lab: Match Words, Whitespace, and Patterns using Regex", "Object-Oriented Linux Environment, Classes & OOP Concepts",
+      "Lab: Directory/File Operations, Check Permissions & Paths", "File Handling, Directory Access, Control Socket",
+      "Lab: Read/Write Files, Count Lines/Words, Read Web Page", "Libraries (hashlib, shodan, datetime), Server-Client Architecture",
+      "Lab: Create Socket between Server & Client, Monitor Activity", "Exploit Development & Writing Plugins",
+      "Lab: Exploit using Socket Programming", "Exploit Analysis Automation & Debugging Basics"
+    ];
 
-  <label><input type="checkbox" /> Aggregate Functions (SUM, COUNT, AVG)</label>
-  <label><input type="checkbox" /> GROUP BY and HAVING Clauses</label>
-  <label><input type="checkbox" /> Subqueries and Nested Queries</label>
-  <label><input type="checkbox" /> Lab: Apply Aggregate, GROUP BY, and HAVING Functions</label>
-</div>
+    const sessionsContainer = document.getElementById("sessions");
+    const progress = document.getElementById("progress");
+    let total = topics.length;
 
-<!-- ===== SECTION: PYTHON ===== -->
-<div class="section" id="python">
-  <h2>B. Python (24 Theory hrs + 26 Lab hrs)</h2>
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `programming-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
 
-  <label><input type="checkbox" /> Installing Python, First Python Program</label>
-  <label><input type="checkbox" /> Declaring Functions, Code Indentation, Native Data Types</label>
-  <label><input type="checkbox" /> Lab: Install Python on Windows/Linux, Print "Hello World"</label>
-  <label><input type="checkbox" /> Lab: Use Loops, If-Else, and User Input</label>
-
-  <label><input type="checkbox" /> Dictionaries: Define, Modify, Delete Items</label>
-  <label><input type="checkbox" /> Lists: Create, Add, Search, Delete, Use Operators</label>
-  <label><input type="checkbox" /> Lab: Create Dictionary, Use Loops, Insert/Delete Elements</label>
-
-  <label><input type="checkbox" /> Tuples: Declare, Reference, Assign Multiple Values</label>
-  <label><input type="checkbox" /> Join Lists, Split Strings, Introduction to Sets</label>
-  <label><input type="checkbox" /> Lab: Create Tuple and Perform Insert/Delete Operations</label>
-
-  <label><input type="checkbox" /> Optional & Named Arguments, Built-in Functions (type, str, dir)</label>
-  <label><input type="checkbox" /> Object References, Socket Programming Basics</label>
-  <label><input type="checkbox" /> Lab: Append, Insert, Remove, Sort on Lists & Strings</label>
-
-  <label><input type="checkbox" /> Regular Expressions, Scripting, Functional Programming</label>
-  <label><input type="checkbox" /> Lab: Match Words, Whitespace, and Patterns using Regex</label>
-
-  <label><input type="checkbox" /> Object-Oriented Linux Environment, Classes & OOP Concepts</label>
-  <label><input type="checkbox" /> Lab: Directory/File Operations, Check Permissions & Paths</label>
-
-  <label><input type="checkbox" /> File Handling, Directory Access, Control Socket</label>
-  <label><input type="checkbox" /> Lab: Read/Write Files, Count Lines/Words, Read Web Page</label>
-
-  <label><input type="checkbox" /> Libraries (hashlib, shodan, datetime), Server-Client Architecture</label>
-  <label><input type="checkbox" /> Lab: Create Socket between Server & Client, Monitor Activity</label>
-
-  <label><input type="checkbox" /> Exploit Development & Writing Plugins</label>
-  <label><input type="checkbox" /> Lab: Exploit using Socket Programming</label>
-
-  <label><input type="checkbox" /> Exploit Analysis Automation & Debugging Basics</label>
-</div>
-
-<script>
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const progress = document.getElementById('progress');
-
-  function updateProgress() {
-    const total = checkboxes.length;
-    const checked = Array.from(checkboxes).filter(box => box.checked).length;
-    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
-  }
-
-  checkboxes.forEach((box, index) => {
-    const key = 'programming-' + index;
-    const saved = localStorage.getItem(key);
-    if (saved === 'true') box.checked = true;
-
-    box.addEventListener('change', () => {
-      localStorage.setItem(key, box.checked);
-      updateProgress();
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      sessionsContainer.appendChild(label);
     });
-  });
 
-  updateProgress();
-</script>
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const checked = Array.from(checkboxes).filter(box => box.checked).length;
+      progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+      box.addEventListener("change", () => {
+        localStorage.setItem(box.dataset.key, box.checked);
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  </script>
 
 </body>
 </html>

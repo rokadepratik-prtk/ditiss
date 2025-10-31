@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PG-DITISS Public Key Infrastructure (PKI)</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
@@ -30,7 +30,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .section {
       background: #fff;
       padding: 15px;
       margin-bottom: 20px;
@@ -82,154 +82,122 @@
 </head>
 <body>
 
- <nav>
-      <ul>
-         <li><a href="index.html">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
-<h1>🔐 Public Key Infrastructure (PG-DITISS)</h1>
-<p id="progress">Progress: 0 of 0 topics completed</p>
+<nav>
+    <ul>
+      <li><a href="index.html">Apti</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">PC</a></li>
+      <li><a href="compliance.html">C&A</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
+</li>
+    </ul>
+  </nav>
 
-<!-- =================== SECTION A =================== -->
-<div class="section">
-  <h2>Session 1: Introduction to Information Security</h2>
-  <label><input type="checkbox" /> Information Security Concepts</label>
-  <label><input type="checkbox" /> Security Attacks & Threats</label>
-</div>
+  <h1>Public Key Infrastructure</h1>
+  <p id="progress">Progress: 0 of 0 topics completed</p>
 
-<div class="section">
-  <h2>Session 2: Basic Encryption</h2>
-  <label><input type="checkbox" /> Basic Encryption Concepts</label>
-  <label><input type="checkbox" /> File Encryption Techniques</label>
-  <label><input type="checkbox" /> Encrypting Folders (Graphical / cipher)</label>
-</div>
+  <div id="sessions">
+    <!-- Checkboxes will be injected here -->
+  </div>
 
-<div class="section">
-  <h2>Session 3: Cryptography Fundamentals</h2>
-  <label><input type="checkbox" /> Cryptographic Fundamentals</label>
-  <label><input type="checkbox" /> Symmetric and Asymmetric Ciphers</label>
-  <label><input type="checkbox" /> Cryptographic Protocols (History, Usage, Keys)</label>
-</div>
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | Public Key Infrastructure Module</p>
+  </footer>
 
-<div class="section">
-  <h2>Session 4: Encryption Algorithms</h2>
-  <label><input type="checkbox" /> Symmetric Key Encryption – DES, AES, RC5</label>
-  <label><input type="checkbox" /> Asymmetric Key Encryption – RSA, ECC</label>
-</div>
+  <script>
+    const topics = [
+      // Session 1
+      "Information Security Concepts", "Security Attacks & Threats",
 
-<div class="section">
-  <h2>Session 5: Key Exchange & Lab Practice (2 Theory + 4 Lab Hrs)</h2>
-  <label><input type="checkbox" /> Diffie-Hellman Key Exchange</label>
-  <label><input type="checkbox" /> Attacks Against Encryption</label>
-  <label><input type="checkbox" /> Cryptographic Issues</label>
-  <label><input type="checkbox" /> Lab: Use Cryptool for Symmetric & Asymmetric Encryption</label>
-  <label><input type="checkbox" /> Lab: Try Caesar, Vernam, DES, AES, RC4, XOR, 3DES</label>
-  <label><input type="checkbox" /> Lab: Perform RSA & ECC Encryption/Decryption</label>
-</div>
+      // Session 2
+      "Basic Encryption Concepts", "File Encryption Techniques", "Encrypting Folders (Graphical / cipher)",
 
-<div class="section">
-  <h2>Session 6: Secure Hashing Methods</h2>
-  <label><input type="checkbox" /> SHA Secure Hash Algorithm</label>
-  <label><input type="checkbox" /> HMAC (Hash-based Message Authentication Code)</label>
-</div>
+      // Session 3
+      "Cryptographic Fundamentals", "Symmetric and Asymmetric Ciphers", "Cryptographic Protocols (History, Usage, Keys)",
 
-<div class="section">
-  <h2>Session 7: PKI Fundamentals</h2>
-  <label><input type="checkbox" /> Digital Signature</label>
-  <label><input type="checkbox" /> Digital Certificate</label>
-</div>
+      // Session 4
+      "Symmetric Key Encryption – DES, AES, RC5", "Asymmetric Key Encryption – RSA, ECC",
 
-<div class="section">
-  <h2>Session 8: Certificate Authorities & Trust Model</h2>
-  <label><input type="checkbox" /> Certificate Authority (CA)</label>
-  <label><input type="checkbox" /> Trust Model</label>
-  <label><input type="checkbox" /> Certificate Issuance Process</label>
-  <label><input type="checkbox" /> Certificate Revocation (CRL, OCSP)</label>
-  <label><input type="checkbox" /> Types and Classes of Certificates</label>
-</div>
+      // Session 5
+      "Diffie-Hellman Key Exchange", "Attacks Against Encryption", "Cryptographic Issues",
+      "Lab: Use Cryptool for Symmetric & Asymmetric Encryption", "Lab: Try Caesar, Vernam, DES, AES, RC4, XOR, 3DES",
+      "Lab: Perform RSA & ECC Encryption/Decryption",
 
-<div class="section">
-  <h2>Session 9: Aadhaar & e-Sign (2 Theory + 4 Lab Hrs)</h2>
-  <label><input type="checkbox" /> Aadhaar & e-Sign Introduction</label>
-  <label><input type="checkbox" /> Time Stamping Services</label>
-  <label><input type="checkbox" /> Lab: Create Digital Signature Using XCA</label>
-  <label><input type="checkbox" /> Lab: Digitally Sign Word & PDF Documents</label>
-</div>
+      // Session 6
+      "SHA Secure Hash Algorithm", "HMAC (Hash-based Message Authentication Code)",
 
-<div class="section">
-  <h2>Session 10: PKCS & FIPS (2 Theory + 4 Lab Hrs)</h2>
-  <label><input type="checkbox" /> PKCS Standards</label>
-  <label><input type="checkbox" /> FIPS 140-2 Overview</label>
-  <label><input type="checkbox" /> Lab: Create Digital Certificate Using XCA</label>
-  <label><input type="checkbox" /> Lab: Create CA and Issue Website Certificate (https://www.ditiss.local)</label>
-  <label><input type="checkbox" /> Lab: Import Certificate in Browser to Remove Warnings</label>
-</div>
+      // Session 7
+      "Digital Signature", "Digital Certificate",
 
-<div class="section">
-  <h2>Session 11: Authentication</h2>
-  <label><input type="checkbox" /> Strong Authentication</label>
-  <label><input type="checkbox" /> Single Factor and Multi-Factor Authentication</label>
-  <label><input type="checkbox" /> Single Sign-On (SSO) Solutions</label>
-  <label><input type="checkbox" /> OpenID & OAuth</label>
-  <label><input type="checkbox" /> Graphical Passwords</label>
-</div>
+      // Session 8
+      "Certificate Authority (CA)", "Trust Model", "Certificate Issuance Process",
+      "Certificate Revocation (CRL, OCSP)", "Types and Classes of Certificates",
 
-<div class="section">
-  <h2>Session 12: Authentication Protocols</h2>
-  <label><input type="checkbox" /> Authentication Protocols Overview</label>
-  <label><input type="checkbox" /> FIDO Authentication</label>
-  <label><input type="checkbox" /> Zero Trust Architecture</label>
-</div>
+      // Session 9
+      "Aadhaar & e-Sign Introduction", "Time Stamping Services",
+      "Lab: Create Digital Signature Using XCA", "Lab: Digitally Sign Word & PDF Documents",
 
-<div class="section">
-  <h2>Session 13: Securing Websites & Emails (2 Theory + 4 Lab Hrs)</h2>
-  <label><input type="checkbox" /> SSL & TLS Overview</label>
-  <label><input type="checkbox" /> PGP and S/MIME</label>
-  <label><input type="checkbox" /> Lab: Create Self-Signed Certificates with OpenSSL</label>
-  <label><input type="checkbox" /> Lab: Build Hierarchical Trust Model (Root & Sub CA)</label>
-  <label><input type="checkbox" /> Lab: Configure HTTPS Website (https://www.pgditiss.local)</label>
-</div>
+      // Session 10
+      "PKCS Standards", "FIPS 140-2 Overview",
+      "Lab: Create Digital Certificate Using XCA", "Lab: Create CA and Issue Website Certificate (https://www.ditiss.local)",
+      "Lab: Import Certificate in Browser to Remove Warnings",
 
-<div class="section">
-  <h2>Session 14 & 15: Legal and Advanced Topics (4 Theory + 4 Lab Hrs)</h2>
-  <label><input type="checkbox" /> IT Act Overview</label>
-  <label><input type="checkbox" /> LDAP and Active Directory</label>
-  <label><input type="checkbox" /> Introduction to Blockchain</label>
-  <label><input type="checkbox" /> Lab: Digitally Sign & Encrypt Email using Thunderbird / Outlook</label>
-</div>
+      // Session 11
+      "Strong Authentication", "Single Factor and Multi-Factor Authentication",
+      "Single Sign-On (SSO) Solutions", "OpenID & OAuth", "Graphical Passwords",
 
-<script>
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const progress = document.getElementById('progress');
+      // Session 12
+      "Authentication Protocols Overview", "FIDO Authentication", "Zero Trust Architecture",
 
-  function updateProgress() {
-    const total = checkboxes.length;
-    const checked = Array.from(checkboxes).filter(b => b.checked).length;
-    progress.textContent = `Progress: ${checked} of ${total} topics completed`;
-  }
+      // Session 13
+      "SSL & TLS Overview", "PGP and S/MIME",
+      "Lab: Create Self-Signed Certificates with OpenSSL", "Lab: Build Hierarchical Trust Model (Root & Sub CA)",
+      "Lab: Configure HTTPS Website (https://www.pgditiss.local)",
 
-  checkboxes.forEach((box, i) => {
-    const key = 'pki-' + i;
-    const saved = localStorage.getItem(key);
-    if (saved === 'true') box.checked = true;
+      // Session 14 & 15
+      "IT Act Overview", "LDAP and Active Directory", "Introduction to Blockchain",
+      "Lab: Digitally Sign & Encrypt Email using Thunderbird / Outlook"
+    ];
 
-    box.addEventListener('change', () => {
-      localStorage.setItem(key, box.checked);
-      updateProgress();
+    const sessionsContainer = document.getElementById("sessions");
+    const progress = document.getElementById("progress");
+    let total = topics.length;
+
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `pki-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
+
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      sessionsContainer.appendChild(label);
     });
-  });
 
-  updateProgress();
-</script>
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const checked = Array.from(checkboxes).filter(box => box.checked).length;
+      progress.textContent = `Progress: ${checked} of ${total} topics completed`;
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+      box.addEventListener("change", () => {
+        localStorage.setItem(box.dataset.key, box.checked);
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  </script>
 
 </body>
 </html>

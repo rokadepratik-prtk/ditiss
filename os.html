@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PG-DITISS OS & Administration Checklist</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f4;
@@ -30,7 +30,7 @@
       transform: scale(1.2);
       cursor: pointer;
     }
-    .session {
+    .section {
       background: #fff;
       padding: 15px;
       margin-bottom: 20px;
@@ -81,87 +81,81 @@
   </style>
 </head>
 <body>
-    <nav>
-      <ul>
-     <li><a href="index.html">Aptitude</a></li>
-        <li><a href="security.html">Security</a></li>
-        <li><a href="fcn.html">CN</a></li>
-        <li><a href="os.html">OS </a></li>
-        <li><a href="cyb_for.html">Cyber</a></li>
-        <li><a href="ndc.html">NDC</a></li>
-        <li><a href="pki.html">PKI</a></li>
-        <li><a href="programming.html">Programming</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-               <li><a href="itim.html">DevOps</a></li>
-      </ul>
-    </nav>
 
+ <nav>
+    <ul>
+      <li><a href="index.html">Apti</a></li>
+      <li><a href="security.html">Security</a></li>
+      <li><a href="fcn.html">CN</a></li>
+      <li><a href="os.html">OS</a></li>
+      <li><a href="cyb_for.html">Cyber</a></li>
+      <li><a href="ndc.html">NDC</a></li>
+      <li><a href="pki.html">PKI</a></li>
+      <li><a href="programming.html">PC</a></li>
+      <li><a href="compliance.html">C&A</a></li>
+      <li><a href="itim.html">DevOps</a></li>
+      <li><li><p id="progress" style="color: white;">Progress: 0 of 0 topics completed</p></li>
+</li>
+    </ul>
+  </nav>
 
-
-  <h1>🖥️ PG-DITISS OS & Administration Checklist</h1>
+  <h1>OS & Administration Checklist</h1>
   <p id="progress">Progress: 0 of 0 topics completed</p>
 
-  <div class="section" id="windows">
-    <h2>Windows OS & Security</h2>
-    <label><input type="checkbox" /> Overview & Installation</label>
-    <label><input type="checkbox" /> Windows Server Backup (WSB)</label>
-    <label><input type="checkbox" /> Active Directory Infrastructure</label>
-    <label><input type="checkbox" /> DNS, DHCP & IPAM</label>
-    <label><input type="checkbox" /> Local & Group Policies</label>
-    <label><input type="checkbox" /> Network Connectivity & VPN</label>
-    <label><input type="checkbox" /> IIS Web Server</label>
-    <label><input type="checkbox" /> Core & Distributed Network Solutions</label>
-    <label><input type="checkbox" /> Windows Deployment Service (WDS)</label>
-    <label><input type="checkbox" /> Hyper-V & Storage Solutions</label>
-    <label><input type="checkbox" /> File Server Resource Manager (FSRM)</label>
-    <label><input type="checkbox" /> Network Policy Server (NPS)</label>
-    <label><input type="checkbox" /> Network Load Balancing (NLB)</label>
-    <label><input type="checkbox" /> Windows Security & Troubleshooting</label>
-    <label><input type="checkbox" /> Exchange Server</label>
-    <label><input type="checkbox" /> PowerShell Administration</label>
+  <div id="sessions">
+    <!-- Checkboxes will be injected here -->
   </div>
 
-  <div class="section" id="linux">
-    <h2>Linux OS & Security</h2>
-    <label><input type="checkbox" /> Linux Basics & File System</label>
-    <label><input type="checkbox" /> Linux Installation & Boot Process</label>
-    <label><input type="checkbox" /> Kickstart & User Administration</label>
-    <label><input type="checkbox" /> Network Setup & Authentication</label>
-    <label><input type="checkbox" /> Disk Management</label>
-    <label><input type="checkbox" /> Print Services & Network Implementation</label>
-    <label><input type="checkbox" /> System Configuration & Services</label>
-    <label><input type="checkbox" /> Patch Management & X Server</label>
-    <label><input type="checkbox" /> DNS, NFS & FTP Configuration</label>
-    <label><input type="checkbox" /> Samba, DHCP & DNS Server Setup</label>
-    <label><input type="checkbox" /> Apache & Squid Proxy</label>
-    <label><input type="checkbox" /> Mail Server Setup (Postfix, Dovecot, Squirrel)</label>
-    <label><input type="checkbox" /> Performance Tuning & Threat Model</label>
-    <label><input type="checkbox" /> Service Security, Logging & NTP</label>
-    <label><input type="checkbox" /> LDAP, NIS & Load Balancer</label>
-    <label><input type="checkbox" /> Virtual Machine Management</label>
-    <label><input type="checkbox" /> Bash CLI & Scripting</label>
-    <label><input type="checkbox" /> Bash Automation & Security Patches</label>
-    <label><input type="checkbox" /> Logging & Monitoring Scripts</label>
-    <label><input type="checkbox" /> Case Study</label>
-  </div>
+  <footer>
+    <p>© 2025 ACTS Pune | PG-DITISS | OS & Administration Module</p>
+  </footer>
 
   <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const progress = document.getElementById('progress');
+    const topics = [
+      // Windows OS & Security
+      "Overview & Installation", "Windows Server Backup (WSB)", "Active Directory Infrastructure", "DNS, DHCP & IPAM",
+      "Local & Group Policies", "Network Connectivity & VPN", "IIS Web Server", "Core & Distributed Network Solutions",
+      "Windows Deployment Service (WDS)", "Hyper-V & Storage Solutions", "File Server Resource Manager (FSRM)",
+      "Network Policy Server (NPS)", "Network Load Balancing (NLB)", "Windows Security & Troubleshooting",
+      "Exchange Server", "PowerShell Administration",
+
+      // Linux OS & Security
+      "Linux Basics & File System", "Linux Installation & Boot Process", "Kickstart & User Administration",
+      "Network Setup & Authentication", "Disk Management", "Print Services & Network Implementation",
+      "System Configuration & Services", "Patch Management & X Server", "DNS, NFS & FTP Configuration",
+      "Samba, DHCP & DNS Server Setup", "Apache & Squid Proxy", "Mail Server Setup (Postfix, Dovecot, Squirrel)",
+      "Performance Tuning & Threat Model", "Service Security, Logging & NTP", "LDAP, NIS & Load Balancer",
+      "Virtual Machine Management", "Bash CLI & Scripting", "Bash Automation & Security Patches",
+      "Logging & Monitoring Scripts", "Case Study"
+    ];
+
+    const sessionsContainer = document.getElementById("sessions");
+    const progress = document.getElementById("progress");
+    let total = topics.length;
+
+    topics.forEach((topic, index) => {
+      const label = document.createElement("label");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      const key = `osadmin-${index}`;
+      checkbox.dataset.key = key;
+      checkbox.setAttribute("aria-label", topic);
+      if (localStorage.getItem(key) === "true") checkbox.checked = true;
+
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(topic));
+      sessionsContainer.appendChild(label);
+    });
 
     function updateProgress() {
-      const total = checkboxes.length;
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
       const checked = Array.from(checkboxes).filter(box => box.checked).length;
       progress.textContent = `Progress: ${checked} of ${total} topics completed`;
     }
 
-    checkboxes.forEach((box, index) => {
-      const key = 'pgditiss-' + index;
-      const saved = localStorage.getItem(key);
-      if (saved === 'true') box.checked = true;
-
-      box.addEventListener('change', () => {
-        localStorage.setItem(key, box.checked);
+    document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+      box.addEventListener("change", () => {
+        localStorage.setItem(box.dataset.key, box.checked);
         updateProgress();
       });
     });
